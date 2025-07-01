@@ -1,0 +1,316 @@
+/* Elegant Desktop-First UI Styling - Consistent Layouts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #eef2f7;
+  color: #2e3a59;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+main {
+  width: 100%;
+  max-width: 1140px;
+}
+
+/* Navbar */
+nav {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  padding: 1.25rem 2rem;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 20px rgba(106, 17, 203, 0.3);
+  max-width: 1140px;
+  width: 100%;
+}
+
+nav a {
+  color: #ffffff;
+  margin: 0 1rem;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fcd34d;
+}
+
+nav button {
+  background: #fcd34d;
+  border: none;
+  color: #1f2937;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav button:hover {
+  background: #fde68a;
+}
+
+/* Universal Container */
+.container,
+.login-container,
+.register-container,
+.projects-container,
+.tasks-container,
+.assign-project-container,
+.project-detail-container,
+.user-projects-container {
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.title,
+.login-title,
+.register-title,
+.projects-title,
+.tasks-container h2,
+.project-detail-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Forms */
+form,
+.login-form,
+.register-form,
+.create-project form,
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input,
+textarea,
+select,
+.login-input,
+.register-input,
+.task-input,
+.task-textarea,
+.task-select,
+.assign-select,
+.assign-multi-select {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #6a11cb;
+  background-color: #ffffff;
+  outline: none;
+}
+
+button,
+.login-button,
+.register-button,
+.task-button,
+.assign-button,
+.delete-button {
+  background: #38bdf8;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.3);
+}
+
+button:hover {
+  background: #0ea5e9;
+}
+
+/* Alerts */
+.error-message,
+.login-error,
+.register-error {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.success-message,
+.register-success {
+  color: #16a34a;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Project and Task Lists */
+ul,
+.project-list ul,
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+li,
+.project-list li,
+.task-item,
+.project-card {
+  background: #f3f4f6;
+  padding: 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover,
+.project-card:hover,
+.task-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+  color: #1e40af;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Links */
+a,
+.register-login-link a,
+.login-register-link a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1e40af;
+}
+
+/* Layout Fix for Forms & Pages */
+@media (min-width: 1024px) {
+  nav a {
+    font-size: 1.15rem;
+  }
+  .container,
+  .login-container,
+  .register-container,
+  .projects-container,
+  .tasks-container,
+  .assign-project-container,
+  .project-detail-container,
+  .user-projects-container {
+    max-width: 700px;
+  }
+  form {
+    gap: 2rem;
+  }
+}
+
+/* Utility */
+.text-center {
+  text-align: center;
+}
+.mt-4 {
+  margin-top: 2rem;
+}
+.mb-4 {
+  margin-bottom: 2rem;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem; /* Adjust spacing between icons */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
+.icon-button:hover {
+  color: #3b82f6; /* Optional: Add a hover effect */
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+}
